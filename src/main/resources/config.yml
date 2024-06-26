@@ -1,0 +1,18 @@
+proxies:
+  # name the proxy
+  main:
+    # the ip of the proxy
+    ip: 127.0.0.1
+    # the port of the proxy
+    port: 20056
+    # when this proxy goes down, which defined proxy should we forward players to?
+    #
+    # WARNING: ALL PLAYERS ON ORIGINAL PROXY WILL DISCONNECT IF SENDTO PROXY IS OFFLINE
+    sendTo: backup
+  backup:
+    ip: 127.0.0.1
+    port: 20057
+    sendTo: main
+
+  # which one of the above proxies is this one?
+  thisProxy: main
